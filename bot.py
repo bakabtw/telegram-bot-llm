@@ -29,10 +29,10 @@ class SimpleTelegramBot:
                 "Reply in format {\"intent\": \"user's intent\"}"
         )
 
+        model_prompt = "You're a regular chatbot."
+
         self.model = GeminiModel(api_key=gemini_token,
-                                 prompt="You're are a personal assistant called Jane. Your goal is to translate "
-                                        "everything from English to Russian and vice versa. You don't speak anything,"
-                                        " ever. You can only translate.")
+                                 prompt=model_prompt)
         self.intent_model = GeminiModel(api_key=gemini_token,
                                         prompt=intent_prompt)
 
